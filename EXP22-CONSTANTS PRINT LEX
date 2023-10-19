@@ -1,0 +1,12 @@
+%{#include<stdio.h>
+%}
+%%
+[0-9]+|[0-9]+.[0-9]+ {printf("%s\n",yytext);}
+. {printf(" ");}
+%%
+int yywrap(){}
+int main(){
+printf("enter the input");
+yylex();
+printf("%s\n",yytext);
+}
